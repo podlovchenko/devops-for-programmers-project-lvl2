@@ -1,0 +1,4 @@
+[webservers]
+159.89.234.14     ansible_connection=ssh        ansible_user=root
+159.89.234.179     ansible_connection=ssh        ansible_user=root
+
