@@ -14,12 +14,9 @@
 
     - name: Deploy redmine application
       community.docker.docker_container:
+        container_default_behavior: no_defaults
         name: redmine
         image: redmine
-        recreate: yes
-        detach: yes
-        restart_policy: always
-        pull: yes
         ports:
           - 8080:3000
         env:
@@ -28,7 +25,6 @@
           REDMINE_DB_DATABASE: "{{ app_db_database }}"
           REDMINE_DB_USERNAME: "{{ app_db_username }}"
           REDMINE_DB_PASSWORD: "{{ app_db_password }}"
-        state: started
 
     - name: install and run Datadog agent
       include_role:
