@@ -1,15 +1,15 @@
 - hosts: all
 
   tasks:
-  
+
     - name: install packages
       ansible.builtin.package:
         name: 'python3-pip'
-        state: present    
+        state: present
         update_cache: yes
 
     - name: install python modules
-      pip: 
+      pip:
         name: ['docker']
 
     - name: Deploy redmine application
