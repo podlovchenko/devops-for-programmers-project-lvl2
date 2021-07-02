@@ -30,3 +30,6 @@
           REDMINE_DB_PASSWORD: "{{ app_db_password }}"
         state: started
 
+    - name: install and run Datadog agent
+      include_role:
+        name: datadog.datadog

@@ -1,2 +1,5 @@
 collections:
-- name: community.docker
+  - name: community.docker
+
+roles:
+  - name: datadog.datadog
